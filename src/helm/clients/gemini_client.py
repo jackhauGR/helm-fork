@@ -132,7 +132,8 @@ class GeminiChatClient(GeminiClient):
                 print(json.dumps(response, indent=2))
 
 
-                candidates = response["candidates"]
+                candidates = response.get("candidates")
+
 
                 if not candidates:
                     raise GeminiContentBlockedError(f"No candidates in response: {response}")
