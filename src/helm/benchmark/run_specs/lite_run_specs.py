@@ -201,7 +201,7 @@ def get_math_spec(
     adapter_spec = AdapterSpec(
         method=ADAPT_GENERATION,
         instructions="Given a mathematics problem, determine the answer. Simplify your answer as much as possible.\n",
-        max_train_instances=8,
+        max_train_instances=4, # CHANGED FROM 8 TO 4
         num_outputs=1,
         temperature=0.0,
         stop_sequences=stop_sequences,
