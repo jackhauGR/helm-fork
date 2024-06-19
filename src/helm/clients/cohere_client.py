@@ -230,7 +230,7 @@ class CohereChatClient(CachingClient):
                     ...
                 }
                 """
-                raw_response = self.client.chat(request_options={"timeout_in_seconds": 10, "max_retries":5},**raw_request).dict()
+                raw_response = self.client.chat(request_options={"timeout_in_seconds": 45, "max_retries":5},**raw_request).dict()
                 assert "text" in raw_response, f"Response does not contain text: {raw_response}"
                 return raw_response
 
